@@ -1,0 +1,24 @@
+All reference
+2017-UBMK-ElectricPrediction-v1.pdf
+	Machine learning based electricity demand forecasting
+- 3 models (decision tree, linear regression, random forest)
+- no dataset
+
+5194810
+ 	Energy Demand Forecasting: Combining Cointegration Analysis
+ and Artificial Intelligence Algorithm
+- Artificial Neural Networks (ANN), genetic algorithm (GA), ant colony optimization (ACO), particle swarm optimization
+- Used of econometric technique 
++ incdicate the population growth, economic growth and urbanization
++ would be valuable to policy makers
+
+energies-15-05950
+	Electricity Demand Forecasting with Use of Artificial
+ Intelligence: The Case of Gokceada Island
+- Artificial Neural Networks (ANN), Particle Swarm Optimization (PSO), Multi Linear Regression
+
+
+
+-- Model / algo will be choose later so no worry yet
+-- All of them use MAE, MSE, MAPE and RMSE why?
+-- Why it got value for policy makers?

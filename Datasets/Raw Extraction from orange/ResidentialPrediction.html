@@ -1,0 +1,744 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <title>Orange Report</title>
+
+    <style>
+    html, body, table {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        margin:0px;
+        padding:0;
+        border:0 none;
+    }
+
+    h1, h2 , h3, h4, h5 {
+       padding: 1px;
+       font-size:100%;
+    }
+
+    h1 {
+        color: white;
+        background-color: black;
+        padding: 4px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        border-bottom: 1px solid black;
+        padding-left: 2px;
+    }
+
+    ul, table, p {
+        padding: 10px;
+    }
+
+    table {
+        margin-left: -6px;
+    }
+
+    span.timestamp {
+        position: absolute;
+        right: 40px;
+        color:#ddd;
+    }
+
+    div.selected, div.normal {
+        margin: 5px;
+    }
+
+    div.selected {
+        background: #ddd;
+    }
+    @media print{
+        div.selected {
+            background: inherit;
+        }
+        ::-webkit-input-placeholder {
+            color: transparent;
+        }
+    }
+
+    div.content {
+        margin-left: 15px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 2px 6px 2px 6px;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    @media screen {
+        td, th {
+            white-space: nowrap;
+        }
+    }
+
+    .caption {
+        text-align: center;
+        font-size: 90%;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        max-height: 20cm;
+    }
+
+    span.legend-square {
+        width: 1em;
+        height: 1em;
+        margin-right: 6px;
+        display: inline-block;
+    }
+
+    span.legend-item {
+        margin-right: 24px;
+    }
+
+    textarea {
+        border: 1px solid silver;
+        font-style: italic;
+        width: 100%;
+        height: 4em;
+    }
+
+    .textwrapper {
+        padding: 15px;
+    }
+
+    div.normal textarea:invalid {
+        display: none;
+    }
+
+    div.selected textarea {
+        display: block;
+    }
+
+    @media print{
+        section.section, img {
+            page-break-inside: avoid;
+        }
+    }
+    </style>
+    <script>
+    function scrollToId(id) {
+        var sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.scrollIntoView();
+            return true;
+        }
+        return false;
+    };
+
+    function setSelectedId(id) {
+        var sel_el = document.getElementsByClassName('selected')[0];
+        if (sel_el != undefined && sel_el.id != id) {
+           sel_el.className = 'normal';
+        }
+        sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.className = 'selected';
+            return true;
+        }
+        return false;
+    };
+    </script>
+
+</head><body onload="(function (id) {     setSelectedId(id); scrollToId(id); }(&quot;2998705790256&quot;));">
+
+ 
+
+<div id="2998705790256" class="selected" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Data Table <span class="timestamp">Thu Dec 12 24, 15:57:45</span></h1><div class="content">
+<ul><b>Data instances:</b> 44<br><b>Features:</b> 8<br><b>Meta attributes:</b> 4<br></ul><table>
+<tbody><tr><th></th><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">Year</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">Stochastic Gradient Descent</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">Linear Regression</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">Random Forest</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">Industrial</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">Transport</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">Agriculture</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">Non-Energy</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">Residential and Commercial</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">Population ('000 people)</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">GDP per Capita at 2015 Prices (RM)</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">GDP per Capita at Current Prices (RM)</th>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">1</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1978.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3948.48</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3994.32</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1169.72</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2273</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1928</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">201</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">712</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">2</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1979.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3948.48</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3994.32</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1169.72</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2599</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2135</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">254</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">794</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">3</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1980.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">186.116</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">251.713</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">937.7</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2870</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2398</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">291</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">826</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">13879</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">10423</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3841</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">4</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1981.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">293.398</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">358.063</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">937.7</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3221</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2587</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">287</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">884</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">14257</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">10851</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">4041</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">5</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1982.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">425.128</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">489.145</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">968.28</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3165</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2794</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">332</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">942</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">14651</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">11190</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">4273</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">6</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1983.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">550.215</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">613.224</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1061.35</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3301</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3170</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">339</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1040</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">15048</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">11718</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">4681</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">7</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1984.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">700.641</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">762.981</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1112.03</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3304</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3300</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">342</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1099</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">15450</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">12146</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">5149</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">8</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1985.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">907.247</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">970.629</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1139.82</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3489</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3377</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">623</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1123</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">15883</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">11711</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">4878</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">9</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1986.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1051.93</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1115.45</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1194.36</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3430</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3726</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">979</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1233</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">16329</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">11523</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">4384</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">10</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1987.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1203.39</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1265.98</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1253.28</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3709</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3929</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1048</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1297</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">16774</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">12038</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">4834</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">11</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1988.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1311.22</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1372.02</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1356.73</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3722</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">4278</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1021</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1435</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">17219</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">12892</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">5364</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">12</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1989.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1432.14</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1491.32</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1472.31</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">4704</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">4684</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">965</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1495</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">17662</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">13709</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">5958</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">13</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1990.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1616.76</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1674.76</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1609</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">5276</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">5386</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">?</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">838</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1622</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">18102</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">14556</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7107</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">14</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1991.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1729.73</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1785.73</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1698.16</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">5809</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">5806</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">130</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1071</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1721</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">18547</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">15563</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7871</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">15</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1992.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1874.61</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1928.78</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1801.16</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">6455</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">6226</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">391</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1222</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1867</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">19068</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">16482</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">8538</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">16</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1993.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2025.86</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2077.87</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2126.34</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7012</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">6558</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">62</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2027</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2055</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">19602</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">17620</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">9491</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">17</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1994.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2189.54</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2239.51</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2296.46</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7283</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7262</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">422</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1817</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2300</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">20142</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">18727</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">10485</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">18</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1995.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2339.99</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2387.51</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2515.2</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">8060</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7827</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">446</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2994</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2556</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">20682</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">20031</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">11622</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">19</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1996.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2488.8</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2533.64</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2997.3</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">9443</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">8951</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">486</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1744</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3162</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">21223</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">21473</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">12917</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">20</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1997.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2682.16</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2725.35</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2898.38</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">10106</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">10201</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">490</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2298</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3072</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">21769</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">22467</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">13986</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">21</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1998.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3215.71</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3264.84</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2942.17</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">10121</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">9793</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">307</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2023</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3314</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">22334</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">20287</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">13702</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">22</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">1999.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3393.22</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3440.96</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3080.12</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">10277</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">11393</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">106</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1799</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3653</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">22910</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">20991</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">14184</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">23</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2000.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3621.7</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3667.47</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2398.24</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">11406</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">12071</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">104</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2250</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3868</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">23495</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">22281</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">15783</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">24</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2001.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3830.1</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3876.55</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2477.17</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">11852</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">13137</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">98</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2378</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">4048</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">24031</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">21897</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">15265</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">25</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2002.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">4045.62</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">4091.16</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">4014.5</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">12854</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">13442</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">96</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2511</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">4387</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">24543</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">22596</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">16246</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">26</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2003.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">4254.68</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">4299.09</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">3980.56</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">13472</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">14271</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">98</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2345</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">4400</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">25038</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">23432</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">17402</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">27</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2004.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">4520.66</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">4563.94</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">4712.77</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">14914</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">15385</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">87</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2183</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">4754</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">25542</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">24527</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">19310</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">28</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2005.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">4788.4</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">4831.02</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">5095.59</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">15583</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">15293</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">101</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2173</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">5134</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">26046</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">25335</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">20870</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">29</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2006.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">5046.34</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">5088.06</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">5359.86</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">15248</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">14819</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">258</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2819</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">5425</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">26550</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">26243</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">22478</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">30</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2007.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">5334</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">5374.68</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">6202.79</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">16454</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">15717</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">281</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2958</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">6197</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">27058</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">27372</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">24589</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">31</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2008.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">5830.15</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">5871.93</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">6377.57</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">16205</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">16395</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">287</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">2876</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">6205</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">27568</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">28163</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">27929</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">32</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2009.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">5862.52</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">5904.57</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">6387.16</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">14312</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">16119</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">211</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3868</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">6336</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">28082</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">27230</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">25385</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">33</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2010.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">6245.78</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">6286.94</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">6784.48</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">12928</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">16828</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1074</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">3696</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">6951</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">28589</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">28733</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">28733</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">34</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2011.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">6601.79</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">6642.7</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">6947.5</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">12100</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">17070</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">916</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">6377</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">6993</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">29062</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">29761</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">31372</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">35</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2012.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">6790.33</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">6829.58</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7120.64</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">13919</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">19757</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1053</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7497</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7065</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">29510</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">30914</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">32913</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">36</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2013.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7058.83</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7097.03</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7238.58</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">13496</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">22357</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1051</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7277</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7403</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">30214</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">31616</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">33713</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">37</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2014.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7312.53</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7348.92</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7428.8</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">13162</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">24327</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1045</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">6217</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7458</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">30709</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">33091</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">36031</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">38</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2015.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7553.47</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7588.73</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7532.77</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">13971</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">23435</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">895</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">5928</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7559</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">31186</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">34118</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">37739</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">39</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2016.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7804.43</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7838.85</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7675.1</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">16019</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">24004</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">415</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">8729</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">8051</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">31634</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">35055</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">39505</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">40</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2017.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">8123.13</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">8156.32</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7807.19</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">17463</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">24039</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">673</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">12517</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7796</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">32023</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">36671</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">42854</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">41</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2018.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7640.04</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7659.92</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7873.8</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">19046</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">23555</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1021</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">13262</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">7774</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">32382</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">42085</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">44699</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">42</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2019.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7654.68</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7671.56</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7979.1</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">18921</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">25004</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">927</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">13631</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">8001</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">32523</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">43794</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">46526</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">43</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2020.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7699.09</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7720.13</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">8011.67</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">17714</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">18660</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">867</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">11805</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">8123</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">32584</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">41282</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">43518</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">44</th>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">2021.0</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">6600.22</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">6602.93</td>
+<td style="color:#000000; background:#dcdcc8; text-align:right; vertical-align:middle;">7977.51</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">19157</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">18095</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">1045</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">10869</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">8084</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">32576</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">47547</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">42689</td>
+</tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);"></textarea></div></div></body></html>
