@@ -1,8 +1,7 @@
 # SENDA: Forecasting Sectoral Energy Usage and Demand Using AI Techniques (SENDA)
 
 ## Introduction
-SENDA ("pathway" in Spanish) represents a strategic direction in energy demand forecasting. This project employs cutting-edge Artificial Intelligence (AI) techniques to predict energy consumption across multiple sectors, addressing global challenges like population growth, industrial expansion, and climate change.
-
+SENDA ("pathway" in Spanish) represents a strategic direction in energy demand forecasting. This project is driven by a deep commitment to contributing to Malaysia's sustainable development goals, addressing critical challenges such as population growth, industrial expansion, and climate change. By employing cutting-edge Artificial Intelligence (AI) techniques, SENDA aims to predict energy consumption across multiple sectors, empowering Malaysia to optimize energy management and ensure a sustainable future.
 ---
 
 ## Project Objectives
@@ -23,7 +22,7 @@ SENDA ("pathway" in Spanish) represents a strategic direction in energy demand f
 SENDA leverages historical energy data from trusted sources, ensuring high-quality and reliable insights:
 
 ### Dataset Sources:
-- [Suruhanjaya Tenaga (ST)](https://www.st.gov.my/)
+- [Suruhanjaya Tenaga (ST)](meih.st.gov.my/statistics)
 
 ### Research References:
 1. **Machine-Learning-Based Electric Power Forecasting** ([Read](https://doi.org/10.3390/su151411299))
@@ -33,7 +32,7 @@ SENDA leverages historical energy data from trusted sources, ensuring high-quali
 ---
 
 ## Tools & Technologies
-- **Data Preprocessing and Modeling**: [Orange Data Mining](https://orangedatamining.com/) and KNIME for comprehensive model development.
+- **Data Preprocessing and Modeling**: [Orange Data Mining](https://orangedatamining.com/) and [KNIME](https://www.knime.com/downloads) for comprehensive model development.
 - **Visualization**: Tableau for clear, actionable insights.
 - **Version Control**: Git and GitHub for collaborative development.
 
@@ -42,14 +41,14 @@ SENDA leverages historical energy data from trusted sources, ensuring high-quali
 ## How to Use
 ### Prerequisites
 - Python 3.8 or higher.
-- [Orange Data Mining](https://orangedatamining.com/download/) and KNIME Analytics Platform.
+- [Orange Data Mining](https://orangedatamining.com/download/) and [KNIME](https://www.knime.com/downloads) Analytics Platform.
 - Git for cloning the repository.
 
 
 ### Running the Workflow
 1. Open Orange or KNIME.
 2. Load the dataset (`Extracted Dataset.xlsx`) located in the project directory.
-3. Dataset are in this path `"..\FYP\Datasets\Dataset from Suruhanjaya Tenaga\Extracted Dataset.xlsx"`.
+3. Dataset are in this path `"..\Final-Year-Project\Datasets\Dataset from Suruhanjaya Tenaga\Extracted Dataset.xlsx"`.
 
 ---
 
@@ -81,11 +80,17 @@ We welcome contributions to improve SENDA. Please:
 ## Contact
 For inquiries or collaboration:
 - **Name**: Muhammad Abqari Bin Zulkifli
-- **Email**: [abqari777@gmail.com](mail to:abqari777@gmail.com)
+- **Email**: [abqari777@gmail.com](mail to: abqari777@gmail.com)
 - **Supervisor**: Suwannit Chareen Chit a/l Sop Chit
+
+---
 
 ## Ethical Consideration
 All of the datasets, learning materials were all from open sources, big shout out to em!
 
+---
+
 ## Quotes
 "Ask not what your country can do for you, ask what you can do for your country" -John F.Kennedy
+
+---
